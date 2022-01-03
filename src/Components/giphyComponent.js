@@ -23,7 +23,7 @@ const GiphyComponent = () =>{
 
             gif = await axios.get('http://api.giphy.com/v1/gifs/trending', {
                 params : {
-                    api_key : 'Z1HKQSVBmGwxwxem4cQLO9p65tUqUIr5'
+                    api_key : process.env.REACT_APP_API_KEY
                 }
             })
 
@@ -47,7 +47,7 @@ const GiphyComponent = () =>{
                 {
                     filterData.length === 0?(
                         <div>
-                            <h1>No GIF FOUND...</h1>
+                            <h1>CAN'T FIND THE { search } GIF....</h1>
                         </div>
                     ):(
                         filterData.map((gif) =>{
