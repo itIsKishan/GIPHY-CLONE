@@ -19,6 +19,7 @@ const GiphyComponent = () =>{
     // fetch data
     const fetchData = async() =>{
         let gif
+        console.log()
         try {
 
             gif = await axios.get('http://api.giphy.com/v1/gifs/trending', {
